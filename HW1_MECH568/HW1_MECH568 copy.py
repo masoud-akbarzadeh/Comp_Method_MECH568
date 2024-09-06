@@ -12,9 +12,6 @@ Usage:
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-import matplotlib as mpl
-
-mpl.rcParams['figure.dpi'] = 200
 
 # Variables
 # y is the is P or pressure in psi
@@ -103,7 +100,7 @@ ax1.set_xlabel('Distance(ft)')
 ax1.set_ylabel('Time(s)')
 ax1.set_zlabel('Pressure(psi)')
 ax1.set_title('Numerical Solution of 1D Wave Equation-implicit')
-ax1.view_init(elev=30, azim=145)  # Change the view angle
+ax1.view_init(elev=60, azim=145)  # Change the view angle
 fig1.savefig('implicit_solution.png')
 
 # Second Plot - Explicit
@@ -114,7 +111,6 @@ ax2.set_xlabel('Distance(ft)')
 ax2.set_ylabel('Time(s)')
 ax2.set_zlabel('Pressure(psi)')
 ax2.set_title('Numerical Solution of 1D Wave Equation-explicit')
-ax2.view_init(elev=30, azim=145)  # Change the view angle
 fig2.savefig('explicit_solution.png')
 
 # Third Plot - Difference
@@ -125,7 +121,6 @@ ax3.set_xlabel('Distance(ft)')
 ax3.set_ylabel('Time(s)')
 ax3.set_zlabel('Pressure(psi)')
 ax3.set_title('Difference between Explicit and Implicit Solutions')
-ax3.view_init(elev=30, azim=145)  # Change the view angle
 fig3.savefig('difference_solution.png')
 
 # Combined Plot
@@ -156,4 +151,43 @@ ax_combined3.set_zlabel('Pressure(psi)')
 ax_combined3.set_title('Difference between Explicit and Implicit Solutions')
 
 fig_combined.savefig('combined_solution.png')
+
+
+
+# # plot the results
+# X, time = np.meshgrid(np.linspace(0, L, Nx), np.linspace(0, t_max, Nt+2))
+
+# fig = plt.figure()
+
+# # First Plot-Implicit
+# ax = fig.add_subplot(131, projection='3d')
+# ax.plot_surface(X, time, y_implicit, cmap='viridis') # don't know why there should be no .T after y ???
+# ax.set_xlabel('Distance(ft)')
+# ax.set_ylabel('Time(s)')
+# ax.set_zlabel('Pressure(psi)')
+# ax.set_title('Numerical Solution of 1D Wave Equation-implicit')
+# fig.savefig('implicit_solution.png')
+
+
+# ax2 = fig.add_subplot(132, projection='3d')
+# ax2.plot_surface(X, time, y_explicit, cmap='viridis')
+# ax2.set_xlabel('Distance(ft)')
+# ax2.set_ylabel('Time(s)')
+# ax2.set_zlabel('Pressure(psi)')
+# ax2.set_title('Numerical Solution of 1D Wave Equation-explicit')
+# fig.savefig('explicit_solution.png')
+
+# ax3 = fig.add_subplot(133, projection='3d')
+# ax3.plot_surface(X, time, y_explicit-y_implicit, cmap='viridis')
+# ax3.set_xlabel('Distance(ft)')
+# ax3.set_ylabel('Time(s)')
+# ax3.set_zlabel('Pressure(psi)')
+# ax3.set_title('Difference between Explicit and Implicit Solutions')
+# fig.savefig('difference_solution.png')
+
+
+
+
+# plt.savefig("1.png")
+# plt.show()
 

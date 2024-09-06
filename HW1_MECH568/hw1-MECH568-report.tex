@@ -1,0 +1,111 @@
+%---------------------
+% START OF PREAMBLE - do not delete!
+%---------------------
+\documentclass[12pt]{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{amsmath}
+\usepackage{verbatim}
+\DeclareGraphicsRule{*}{mps}{*}{}
+
+%==============================================================================
+% Page layout
+%==============================================================================
+
+%------------------------------------------------------------------------------
+%  Define the page dimensions.
+%------------------------------------------------------------------------------
+\setlength{\hoffset}{0.0in}
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\evensidemargin}{0.0in}
+\setlength{\textwidth}{6.75in}
+
+\setlength{\voffset}{0in}
+\setlength{\topmargin}{-.6in}
+\setlength{\headheight}{12pt}
+\setlength{\headsep}{12pt}
+\setlength{\textheight}{9.5in}
+\renewcommand{\baselinestretch}{1.0}
+\renewcommand{\labelitemi}{-}
+
+% writing the section number and the subsection number together
+% and also the subsubsection in the form of 1.a
+\renewcommand\thesubsection{\arabic{section}.\alph{subsection}}
+\renewcommand\thesection{Problem \arabic{section}}
+%------------------------------------------------------------------------------
+
+%---------------------
+% END OF PREAMBLE - do not delete!
+%---------------------
+
+\begin{document}
+
+%---------------------
+% make the title
+%---------------------
+\title{Mech 568 - Assignment 01 - Finite Difference}
+\author{Masoud Akbarzadeh}
+\date{\today}
+
+
+\maketitle
+
+%\newpage
+%---------------------
+
+%---------------------
+% begin main text
+%---------------------
+\section{}\label{sec:problem-1}
+
+\subsection{}\label{subsec:problem-1-a}
+I used the 20-year wintertime North American surface temperature.
+I chose six clusters for this analysis.
+The analysis was done for 100 iterations but the results were the same for all the iterations more than 10.
+\[ \frac{\partial^2 P}{\partial t^2} = c^2 \frac{\partial^2 P}{\partial x^2}  \]
+
+\[ r = \frac{c^2 \Delta t^2}{\Delta x^2}   \]
+
+Explicit method:
+
+\[ P_{k+1,i} = r P_{k,i-1} + [2-2r] P_{k,i} + r P_{k,i+1} - P_{k-1,i}  \]
+
+Implicit method:
+\[ P_{k,i} - \frac{1}{2} P_{k-1,i} = -\frac{r}{2} P_{k+1,i-1} + \frac{(2r+1)}{2} P_{k+1,i} - \frac{r}{2} P_{k+1,i+1} \]
+
+
+\subsection{}\label{subsec:problem-1-b}
+Done.
+\subsection{}\label{subsec:problem-1-c}
+The six cluster centroids are shown in Figure 1.
+
+\subsection{}\label{subsec:problem-1-d}
+Done.
+\subsection{}\label{subsec:problem-1-e}
+
+To interpret the clusters in figure 1,
+\begin{itemize}
+    \item Cluster 1: It is warmer in Florida and Mexico region and colder on other parts of the US and Canada.
+    \item Cluster 2: The temperature is the highest in the west and lower in the east.
+    \item Cluster 3: It is warmer on the east side of the Rocky Mountains and colder on the west side.
+    \item Cluster 4: The temperature is generally warm, and it is warmer in the north.
+    \item Cluster 5: The temperature is lower in the North and warmer in the south.
+    \item Cluster 6: It is cold in the south-eastern part of the US and mild in the north-western part.
+\end{itemize}
+
+The figure 2 shows the number of data points in each cluster.
+It shows that cluster 2 has the most data points it means that non-harsh winters are more common with the temperature being mildly higher in the west.
+and the fewest data points are in cluster 1 and 5.
+These clusters show the temperature in what regions are most probable to correlate with each other.\\
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\textwidth]{Figure_1.png}
+\caption{The six clusturs for the analysis of temeprature anamolies in the winters of North America}{\label{fig: problem-2-c}}
+\end{center}
+\end{figure}
+
+
+
+\end{document}
+
+
