@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.30)  5 SEP 2024 16:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.30)  6 SEP 2024 13:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -114,7 +114,17 @@ Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count280
 \l__pdf_internal_box=\box54
-) (./hw1-MECH568-report.aux)
+) (./hw1-MECH568-report.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `fig: problem-2-c' multiply defined.
+
+)
 \openout1 = `hw1-MECH568-report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
@@ -150,40 +160,60 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (c:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
+<problem-statement.png, id=1, 1155.56718pt x 319.1925pt>
+File: problem-statement.png Graphic file (type png)
+<use problem-statement.png>
+Package pdftex.def Info: problem-statement.png  used on input line 68.
+(pdftex.def)             Requested size: 487.8225pt x 134.74666pt.
+
 
 [1
 
-{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 95--99
+{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./problem-statement.png>]
+<explicit_solution.png, id=15, 462.528pt x 346.896pt>
+File: explicit_solution.png Graphic file (type png)
+<use explicit_solution.png>
+Package pdftex.def Info: explicit_solution.png  used on input line 104.
+(pdftex.def)             Requested size: 487.8225pt x 365.88713pt.
+<implicit_solution.png, id=16, 462.528pt x 346.896pt>
+File: implicit_solution.png Graphic file (type png)
+<use implicit_solution.png>
+Package pdftex.def Info: implicit_solution.png  used on input line 123.
+(pdftex.def)             Requested size: 487.8225pt x 365.88713pt.
+<difference_solution.png, id=17, 462.528pt x 346.896pt>
+File: difference_solution.png Graphic file (type png)
+<use difference_solution.png>
+Package pdftex.def Info: difference_solution.png  used on input line 134.
+(pdftex.def)             Requested size: 487.8225pt x 365.88713pt.
 
- []
 
-<Figure_1.png, id=14, 1122.3531pt x 372.9132pt>
-File: Figure_1.png Graphic file (type png)
-<use Figure_1.png>
-Package pdftex.def Info: Figure_1.png  used on input line 102.
-(pdftex.def)             Requested size: 487.8225pt x 162.07936pt.
+[2 <./explicit_solution.png>]
 
+[3 <./implicit_solution.png>]
 
-[2 <./Figure_1.png>] (./hw1-MECH568-report.aux)
+[4 <./difference_solution.png>] (./hw1-MECH568-report.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-16>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 2061 strings out of 473579
- 31431 string characters out of 5732263
+ 2080 strings out of 473579
+ 32034 string characters out of 5732263
  1932960 words of memory out of 5000000
- 24974 multiletter control sequences out of 15000+600000
- 564055 words of font info for 57 fonts, out of 8000000 for 9000
+ 24993 multiletter control sequences out of 15000+600000
+ 564362 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,278b,269s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,6n,65p,274b,271s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on hw1-MECH568-report.pdf (2 pages, 337448 bytes).
+Output written on hw1-MECH568-report.pdf (4 pages, 322472 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 66 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

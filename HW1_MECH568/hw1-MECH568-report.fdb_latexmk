@@ -1,7 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1725574109.66859 "c:/Phd/Comp_Method_MECH568/HW1_MECH568/hw1-MECH568-report.tex" "hw1-MECH568-report.pdf" "hw1-MECH568-report" 1725574110.65866 0
-  "Figure_1.png" 1725574108 305422 3f3411a65890bec914adfc5fd39f2a96 ""
-  "c:/Phd/Comp_Method_MECH568/HW1_MECH568/hw1-MECH568-report.tex" 1725574065 3852 e9c74a2c6eef3d8a61f0c9f772f8fae2 ""
+["pdflatex"] 1725652729.20759 "c:/Phd/Comp_Method_MECH568/HW1_MECH568/hw1-MECH568-report.tex" "hw1-MECH568-report.pdf" "hw1-MECH568-report" 1725652730.17921 0
+  "c:/Phd/Comp_Method_MECH568/HW1_MECH568/hw1-MECH568-report.tex" 1725652727 4481 0bda24a3fdc9405ce07f7548b199baa5 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1725047781 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1724966185 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1724966185 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -47,8 +46,12 @@
   "c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1725062438 5543950 2aa73a438b7054b2327b796fbe5f4275 ""
   "c:/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1725062593 8239328 0aedf91f3d0932c96719960ee0eeea0a ""
   "c:/texlive/2024/texmf.cnf" 1725062413 713 e69b156964470283e0530f5060668171 ""
-  "hw1-MECH568-report.aux" 1725574110 1105 d653172909c36b6a235d8c384cfa3c11 "pdflatex"
-  "hw1-MECH568-report.tex" 1725574065 3852 e9c74a2c6eef3d8a61f0c9f772f8fae2 ""
+  "difference_solution.png" 1725651133 100348 3dc645a7aa815eaaecee67aba99edb78 ""
+  "explicit_solution.png" 1725651133 92531 f6054290ba64225e8a778b3ef7ef1a79 ""
+  "hw1-MECH568-report.aux" 1725652730 1509 4f62e842facc4142ee03674f2c17d5fa "pdflatex"
+  "hw1-MECH568-report.tex" 1725652727 4481 0bda24a3fdc9405ce07f7548b199baa5 ""
+  "implicit_solution.png" 1725651133 105151 e677f9f5624372cc42bbbaa3648a6013 ""
+  "problem-statement.png" 1725644897 27142 b0e63f53f289b2f443d0591bcb160fd6 ""
   (generated)
   "hw1-MECH568-report.aux"
   "hw1-MECH568-report.log"

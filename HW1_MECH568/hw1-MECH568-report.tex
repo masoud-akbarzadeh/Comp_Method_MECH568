@@ -57,50 +57,82 @@
 %---------------------
 \section{}\label{sec:problem-1}
 
-\subsection{}\label{subsec:problem-1-a}
-I used the 20-year wintertime North American surface temperature.
-I chose six clusters for this analysis.
-The analysis was done for 100 iterations but the results were the same for all the iterations more than 10.
-\[ \frac{\partial^2 P}{\partial t^2} = c^2 \frac{\partial^2 P}{\partial x^2}  \]
-
-\[ r = \frac{c^2 \Delta t^2}{\Delta x^2}   \]
-
-Explicit method:
-
-\[ P_{k+1,i} = r P_{k,i-1} + [2-2r] P_{k,i} + r P_{k,i+1} - P_{k-1,i}  \]
-
-Implicit method:
-\[ P_{k,i} - \frac{1}{2} P_{k-1,i} = -\frac{r}{2} P_{k+1,i-1} + \frac{(2r+1)}{2} P_{k+1,i} - \frac{r}{2} P_{k+1,i+1} \]
-
-
-\subsection{}\label{subsec:problem-1-b}
-Done.
-\subsection{}\label{subsec:problem-1-c}
-The six cluster centroids are shown in Figure 1.
-
-\subsection{}\label{subsec:problem-1-d}
-Done.
-\subsection{}\label{subsec:problem-1-e}
-
-To interpret the clusters in figure 1,
-\begin{itemize}
-    \item Cluster 1: It is warmer in Florida and Mexico region and colder on other parts of the US and Canada.
-    \item Cluster 2: The temperature is the highest in the west and lower in the east.
-    \item Cluster 3: It is warmer on the east side of the Rocky Mountains and colder on the west side.
-    \item Cluster 4: The temperature is generally warm, and it is warmer in the north.
-    \item Cluster 5: The temperature is lower in the North and warmer in the south.
-    \item Cluster 6: It is cold in the south-eastern part of the US and mild in the north-western part.
-\end{itemize}
-
-The figure 2 shows the number of data points in each cluster.
-It shows that cluster 2 has the most data points it means that non-harsh winters are more common with the temperature being mildly higher in the west.
-and the fewest data points are in cluster 1 and 5.
-These clusters show the temperature in what regions are most probable to correlate with each other.\\
+\subsection{Problem Statement}\label{subsec:Problem Statement}
+The 1-D wave equation for an acousting wave using the finite difference method is defined As:
+\begin{equation}
+    \frac{\partial^2 P}{\partial t^2} = c^2 \frac{\partial^2 P}{\partial x^2}
+\end{equation}
 
 \begin{figure}
 \begin{center}
-\includegraphics[width=\textwidth]{Figure_1.png}
-\caption{The six clusturs for the analysis of temeprature anamolies in the winters of North America}{\label{fig: problem-2-c}}
+\includegraphics[width=\textwidth]{problem-statement.png}
+\caption{Schematic of the boundary conditions of the 1-D pipe under an acoustic wave}{\label{fig: problem-2-c}}
+\end{center}
+\end{figure}
+
+\textbf{Assumptions and conditions:}
+\begin{itemize}
+    \item simulating the first 0.05s of the wave with 0.001s time increments.
+    \item Length of the pipe: 100 ft
+    \item Number of spatial points 10 (one point each 10 ft)
+    \item \( c = 1125  \frac{ft}{s} \) is the speed of sound in water.
+    \item The initial pressure is the steady-state value of 850psi
+    \item Since the the wave equation is a 2nd order differential with respect to time we need to initial conditions which is the pressure of 850psi at the time step 0 and -1
+    \item  In order to make the equations simpler:
+    \begin{equation}
+    r = \frac{c^2 \Delta t^2}{\Delta x^2} 
+    \end{equation}
+\end{itemize}
+
+
+
+
+
+
+
+\subsection{Explicit Method}\label{}
+The equation after discretizizng the equation using the explicit method:
+\begin{equation}
+    P_{k+1,i} = r P_{k,i-1} + [2-2r] P_{k,i} + r P_{k,i+1} - P_{k-1,i} 
+\end{equation}
+Starting at the first time step at each time step, for any point this equation is solved.
+
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\textwidth]{explicit_solution.png}
+\caption{The plot of the solution for 1-D wave equation using explicit method}{}
+\end{center}
+\end{figure}
+
+\subsection{Implicit Method}\label{}
+
+The equation after discretizizng the equation using the Implicit method:
+% \[ P_{k,i} - \frac{1}{2} P_{k-1,i} = -\frac{r}{2} P_{k+1,i-1} + \frac{(2r+1)}{2} P_{k+1,i} - \frac{r}{2} P_{k+1,i+1} \]
+
+\begin{equation}
+    P_{k,i} - \frac{1}{2} P_{k-1,i} = -\frac{r}{2} P_{k+1,i-1} + \frac{(2r+1)}{2} P_{k+1,i} - \frac{r}{2} P_{k+1,i+1}
+\end{equation}
+
+The \( P_{k,i} \) and \( P_{k-1,i} \) are know. The left side of the equation are the unknowns that make a matrix for all the points of the domain.
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\textwidth]{implicit_solution.png}
+\caption{The plot of the solution for 1-D wave equation using implicit method}{}
+\end{center}
+\end{figure}
+    
+
+\subsection{Discussion}\label{}
+
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=\textwidth]{difference_solution.png}
+\caption{The plot of the difference of the implicit and explicit method}{\label{fig: problem-2-c}}
 \end{center}
 \end{figure}
 

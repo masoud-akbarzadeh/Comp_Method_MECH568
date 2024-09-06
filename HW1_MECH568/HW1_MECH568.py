@@ -26,15 +26,15 @@ mpl.rcParams['figure.dpi'] = 200
 # y[1, :] Pressure at time step 0
 # y[0, :] Pressure at time step -1  
 
-t_min = 0    # time at the end               # in sec 
-t_max = 0.05     # time at the start               # in sec
-dt = 0.001  # delta_t or time increaments       # in sec
+t_min = 0           # Start time in seconds             # in sec 
+t_max = 0.05        # End time                          # in sec
+dt = 0.001          # delta_t or time increaments       # in sec
 Nt = int((t_max - t_min) / dt) # Number of time steps
 
-x_min = 0                                       # in ft
-x_max = 100     # the length at the end         # in ft
+x_min = 0                                               # in ft
+x_max = 100         # the length at the end                 # in ft
 L = x_max - x_min
-Nx = 10                                        # Number of Spatial points
+Nx = 10             # Number of Spatial points
 
 # Discretization
 dx = L / (Nx - 1)
